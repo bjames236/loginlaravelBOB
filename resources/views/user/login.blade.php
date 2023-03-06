@@ -1,5 +1,5 @@
 @include('partials.header')
-
+<a class="navbar-brand" href="#"><img src="logo.png" alt=""></a>
 <h3>Login Page</h3>
 <form action="/login/process" method="POST">
     @csrf

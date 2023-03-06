@@ -1,5 +1,5 @@
 @include('partials.header')
-
+<a class="navbar-brand" href="#"><img src="logo.png" alt=""></a>
 <h3>Create an Account</h3>
 <form action="/store" method="POST">
     @csrf
@@ -16,7 +16,7 @@
       class="form-control" 
       aria-describedby="emailHelp"
       name="name">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div id="emailHelp" class="form-text"></div>
     </div>
 
     <div class="mb-3">
