@@ -1,52 +1,58 @@
 @include('partials.header')
-<a class="navbar-brand" href="#"><img src="logo.png" alt=""></a>
-<h3>Create an Account</h3>
 <form action="/store" method="POST">
-    @csrf
+@csrf
     
     @error('email')
         <p>Invalid Account</p>
     @enderror
 
 
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input 
-      type="text" 
-      class="form-control" 
-      aria-describedby="emailHelp"
-      name="name">
-      <div id="emailHelp" class="form-text"></div>
-    </div>
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input 
-      type="email" 
-      class="form-control" 
-      id="exampleInputEmail1" 
-      aria-describedby="emailHelp"
-      name="email">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" 
-      class="form-control" 
-      id="exampleInputPassword1"
-      name="password">
-    </div>
+              <form>
 
-    <div class="mb-3">
-      <label for="confirmpassword" class="form-label">Confirm Password</label>
-      <input type="password" 
-      class="form-control" 
-      id="exampleInputPassword1"
-      name="password_confirmation">
-    </div>
-   
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg" name="email">Your Email</label>
+                </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  <h6><a href={{"/login"}}>Already have an account? Sign in here.</a></h6>
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg" name="password">Password</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cdg" name="password_confirmation">Repeat your password</label>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href={{"/login"}}
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   @include('partials.footer')
+</section>
+  </form>
+  <h6><a ></a></h6>
